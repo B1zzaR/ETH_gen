@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{article.title}}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1 style="margin-left:10%">{{article.title}}</h1>
+        <p style="text-align:center;">{{article.date}}</p>
+        <div style="border:2px solid #2D3139;border-radius:20px;margin-left:10%;">
+            <p>{{article.full_text}}</p>
+        </div>
+
+    </div>
+{% endblock %}

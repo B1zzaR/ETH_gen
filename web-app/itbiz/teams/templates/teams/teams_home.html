@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1 style="margin-left:50px;margin-bottom:50px;">Темы на сайте</h1>
+        {%for el in team%}
+            <div class="team">
+            <h1 style="margin-left:20px;">{{el.title}}</h1>
+            <p style="margin-left:35px;">{{el.anons}}</p>
+            <p style="float:right;color:grey;font-size:15px;">{{el.date}}</p>
+            <a href="{%url 'teams-detail' el.id%}" class="btn btn-warning" style="background-color:#00c2cc; border:none; float:right;position: relative;top: -90px;left: 175px;"><i class="fa-solid fa-circle-info fa-2xl"></i></a>
+            </div>
+        {%endfor%}
+    </div>
+{% endblock %}
