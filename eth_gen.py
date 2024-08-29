@@ -51,3 +51,4 @@ if __name__ == "__main__":
     print(f"Приватный ключ: {priv_key}")
     print(f"Время выполнения: {end_time - start_time:.2f} секунд")
     input()
+#
